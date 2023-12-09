@@ -1,0 +1,38 @@
+extends ./assets/pug/layout
+block main
+    .container-fuild.bg-log
+        .container.py-5
+            .row 
+                .col-lg-6
+                    .from.p-6
+                        form(action="" method="method").d-flex.flex-column.gap-3.border.p-5.bg-form-log.border-2.border-white.rounded-10
+                            .logo 
+                                img(src="./images/logo.png", alt="")
+                            h3 Login 
+                            
+                            label(for="")
+                                span.name-log.fz-text-b1 Email
+                                input.py-2.ipnut-log(type="email", name="").w-100.px-2.fz-text-b1.border.w-100.border-dark.form-log.rounded-3.mt-2
+                            label(for="")
+                                span.name-log.fz-text-b1 Password 
+                                input.py-2.ipnut-log(type="Password", name="").w-100.px-2.fz-text-b1.border.w-100.border-dark.form-log.rounded-3.mt-2
+                            .account.fz-text-b2.d-flex.gap-2.mt-2
+                                span Already have an account?
+                                a(href="#") Signup 
+                            button.w-100.text-white.fz-h5.fw-600.bg-primary.border.border-3.border-primary.py-2.rounded-3.button-primary.mt-2 Login 
+                            span.fz-text-b3.text-color.text-center or continue with
+                            .row.g-2.mt-3
+                                .col-xl-4.col-lg-4.col-md-4.col-sm-4
+                                    .images-icon-social.px-2.rounded-3.cursor 
+                                        img(src="./images/google.svg", alt="alt").w-100.py-2.bg-white.img-cover.p-4
+                                .col-xl-4.col-lg-4.col-md-4.col-sm-4
+                                    .images-icon-social.px-2.rounded-3.cursor 
+                                        img(src="./images/facebook.svg", alt="alt").w-100.py-2.bg-white.img-cover.p-4
+                                .col-xl-4.col-lg-4.col-md-4.col-sm-4
+                                    .images-icon-social.px-2.rounded-3.cursor 
+                                        img(src="./images/github.svg", alt="alt").w-100.py-2.bg-white.img-cover.p-4
+                .col-lg-6.log-img.flex-center
+                    div
+                        .img-log
+                            img(src="./images/img_login.png", alt="alt").img-cover.flex-center
+                            

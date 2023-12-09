@@ -1,0 +1,97 @@
+extends ./assets/pug/layout
+block main
+    +section-direction("Shop","Detail","Explore Detail Product")
+    section.container.py-5 
+        .cart-header.d-flex.align-items-center.justify-content-between
+            h3.text-color.fw-500 Your Cart
+            span.cursor.text-secondary.fz-text-b1 Clear Shopping Cart
+        .cart-table.pt-3
+            .cart-table-hearder.row.d-flex.align-items-center.py-4.rounded-3.bg-card
+                .product-remove.col-1
+                    span.fz-h5.fw-400.text-color Delete
+                .product-img.col-2
+                    span.fz-h5.fw-400.text-color Product
+                .product-name.col-3
+                    span.fz-h5.fw-400.text-color Name
+                .product-price.col-2
+                    span.fz-h5.fw-400.text-color Price
+                .product-quantity.col-2
+                    span.fz-h5.fw-400.text-color Quantity
+                .product-subtotal.col-2
+                    span.fz-h5.fw-400.text-color Subtotal
+            .cart-table-body
+                .row.cart-product-item.py-4.d-flex.align-items-center
+                    .product-remove.col-1
+                        ion-icon(name="close").fz-text-b1.p-2.rounded-circle.bg-gray.text-white.cursor
+                    .product-img.col-2
+                        img(src="./images/product-04.webp", alt="alt").w-50.rounded-3
+                    .product-name.col-3
+                        span.fz-h5.fw-500.text-color 3D™ wireless headset
+                    .product-price.col-2
+                        .product-table-price 
+                            span.text-color.fz-h5.fw-500 $
+                            span.text-color.fz-h5.fw-500 400
+                    .product-quantity.col-2
+                         input(type="number", name="" value="1").quantity.p-2.fz-text-b1.fw-600.w-50.border-0
+                    .product-subtotal.col-2
+                        .product-table-price-total 
+                            span.text-color.fz-h5.fw-500 $
+                            span.text-color.fz-h5.fw-500 400
+                .row.cart-product-item.py-4.d-flex.align-items-center
+                    .product-remove.col-1
+                        ion-icon(name="close").fz-text-b1.p-2.rounded-circle.bg-gray.text-white.cursor
+                    .product-img.col-2
+                        img(src="./images/product-04.webp", alt="alt").w-50.rounded-3
+                    .product-name.col-3
+                        span.fz-h5.fw-500.text-color 3D™ wireless headset
+                    .product-price.col-2
+                        .product-table-price 
+                            span.text-color.fz-h5.fw-500 $
+                            span.text-color.fz-h5.fw-500 400
+                    .product-quantity.col-2
+                         input(type="number", name="" value="1").quantity.p-2.fz-text-b1.fw-600.w-50.border-0
+                    .product-subtotal.col-2
+                        .product-table-price-total 
+                            span.text-color.fz-h5.fw-500 $
+                            span.text-color.fz-h5.fw-500 400
+            .table-footer 
+                .row 
+                    .col-xl-6.col-lg-6
+                        .row.g-3
+                            .col-9
+                                input(type="text", name="" placeholder="Voucher").w-100.py-2.fz-text-b1.rounded-3.px-3.border-light.bg-white.border
+                            .col-3
+                                button.button-primary.w-100.bg-secondary.fz-text-b1.fw-500.text-white.rounded-3 Aplly
+                    .col-xl-6.col-lg-6.d-flex.justify-content-end
+                        button.button-primary.px-5.bg-primary.fz-text-b1.fw-500.text-white.rounded-3 Update cart 
+        .order-summary.row 
+            .col-xl-5.col-lg-7.offset-xl-7.offset-lg-5
+                .mt-5.bg-card.rounded-3
+                    .summary-conent.p-5
+                        h3 Order Summary
+                        .row.border-bottom.border-white.py-4 
+                            .col-6
+                                span.text-color.fz-text-b1.fw-500 Subtotal 
+                            .col-6
+                                .product-table-price 
+                                    span.text-color.fz-text-b1.fw-500 $
+                                    span.text-color.fz-text-b1.fw-500 400
+                        .row.border-bottom.border-white.py-4 
+                            .col-6
+                                span.text-color.fz-text-b1.fw-500 Voucher 
+                            .col-6
+                                .product-table-price 
+                                    span.text-color.fz-text-b1.fw-500 $
+                                    span.text-color.fz-text-b1.fw-500 20
+                        .row.border-bottom.border-white.py-4 
+                            .col-6
+                                span.text-color.fz-text-b1.fw-500 Total 
+                            .col-6
+                                .product-table-price 
+                                    span.text-primary.fz-h4.fw-600 $
+                                    span.text-primary.fz-h4.fw-600 380
+                        .mt-5
+                            a(href="").py-3 
+                                button.w-100.bg-secondary.py-3.fz-h5.fw-600.text-white.rounded-3.button-primary Checkout            
+
+

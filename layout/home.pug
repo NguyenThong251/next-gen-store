@@ -1,0 +1,152 @@
+extends ./assets/pug/layout
+block main
+    section
+        #carouselExampleIndicators.carousel.slide(data-bs-ride='carousel')
+            .carousel-indicators
+                button.active(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
+                button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='1' aria-label='Slide 2')
+                button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='2' aria-label='Slide 3')
+            .carousel-inner
+                .carousel-item.active
+                    img.d-block.w-100.height-600(src='https://plus.unsplash.com/premium_photo-1700315990373-ecefbbe3e6bf?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='...')
+                .carousel-item
+                    img.d-block.w-100.height-600(src='https://plus.unsplash.com/premium_photo-1700315990373-ecefbbe3e6bf?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='...')
+                .carousel-item
+                    img.d-block.w-100.height-600(src='https://plus.unsplash.com/premium_photo-1700315990373-ecefbbe3e6bf?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='...')
+            button.carousel-control-prev(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide='prev')
+                span.carousel-control-prev-icon(aria-hidden='true')
+                span.visually-hidden Previous
+            button.carousel-control-next(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide='next')
+                span.carousel-control-next-icon(aria-hidden='true')
+                span.visually-hidden Next
+    section.py-5.container
+        .category-header 
+            .category-tag.d-flex.align-items-center.gap-2
+                ion-icon(name="pricetags").fz-text-b1.fw-600.p-2.rounded-circle.bg-secondary.text-white
+                span.fz-text-b1.fw-600.text-secondary Categories
+            .category-title.py-3.d-flex.align-items-center.justify-content-between 
+                h3.text-color.fw-600.fz-h2 Browse by Category
+                .category-icon.d-flex.gap-2 
+                    ion-icon(name="arrow-back").text-color.fw-600.p-2.rounded-2.border.border-light.fz-text-b1
+                    ion-icon(name="arrow-forward").text-color.fw-600.p-2.rounded-2.border.border-light.fz-text-b1
+        .category-main.overflow-hidden
+            .d-flex.gx-5.gap-3 
+                +category("./images/category-1.webp","Computer")
+                +category("./images/category-2.webp","Computer")
+                +category("./images/category-3.webp","Computer")
+                +category("./images/category-4.webp","Computer")
+                +category("./images/category-5.webp","Computer")
+                +category("./images/category-1.webp","Computer")
+    section.container.py-5 
+        .section-header 
+            .category-tag.d-flex.align-items-center.gap-2
+                ion-icon(name="cart").fz-text-b1.fw-600.p-2.rounded-circle.bg-secondary.text-white
+                span.fz-text-b1.fw-600.text-secondary Our Products
+            .category-title.py-3.d-flex.align-items-center.justify-content-between 
+                h3.text-color.fw-600.fz-h2 Explore our Products
+                .category-icon.d-flex.gap-2 
+                    ion-icon(name="arrow-back").text-color.fw-600.p-2.rounded-2.border.border-light.fz-text-b1
+                    ion-icon(name="arrow-forward").text-color.fw-600.p-2.rounded-2.border.border-light.fz-text-b1
+        .section-body
+            .row.g-5
+                .col-md-6.col-lg-4.col-xl-3
+                    +product-list
+                .col-md-6.col-lg-4.col-xl-3
+                    +product-list
+                .col-md-6.col-lg-4.col-xl-3
+                    +product-list
+                .col-md-6.col-lg-4.col-xl-3
+                    +product-list
+                .col-md-6.col-lg-4.col-xl-3
+                    +product-list
+                .col-md-6.col-lg-4.col-xl-3
+                    +product-list
+                .col-md-6.col-lg-4.col-xl-3
+                    +product-list
+                .col-md-6.col-lg-4.col-xl-3
+                    +product-list
+            a(href="").flex-center.unlink.pt-6 
+                button.button-secondary.rounded-2.fw-600.py-3.px-5.fz-h5 View All Product
+    section.container-fuild.py-5.bg-section 
+        .container
+            .section-header 
+                .category-tag.d-flex.align-items-center.gap-2
+                    ion-icon(name="cart").fz-text-b1.fw-600.p-2.rounded-circle.bg-secondary.text-white
+                    span.fz-text-b1.fw-600.text-secondary Our Products
+                .category-title.py-3.d-flex.align-items-center.justify-content-between 
+                    h3.text-color.fw-600.fz-h2 Explore our Products
+                    .category-icon.d-flex.gap-2 
+                        ion-icon(name="arrow-back").text-color.fw-600.p-2.bg-white.rounded-2.border.border-light.fz-text-b1
+                        ion-icon(name="arrow-forward").text-color.fw-600.p-2.bg-white.rounded-2.border.border-light.fz-text-b1
+            .section-body
+                .row.g-5 
+                    .col-md-12.col-lg-6.col-xl-4
+                        +customer
+                    .col-md-12.col-lg-6.col-xl-4
+                        +customer
+                    .col-md-12.col-lg-6.col-xl-4
+                        +customer
+    section.py-5
+        .container.py-5.border-top.border-bottom
+            .section-header.d-flex.flex-column.align-items-center
+                .category-tag.d-flex.align-items-center.gap-2
+                    ion-icon(name="star").fz-text-b1.fw-600.p-2.rounded-circle.bg-secondary.text-white
+                    span.fz-text-b1.fw-600.text-secondary Most Sold
+                .category-title.py-3.d-flex.align-items-center.justify-content-between 
+                    h3.text-color.fw-600.fz-h2 Most Sold in eTrade Store
+            .section-body 
+                .row.g-5 
+                    .col-xl-6.col-lg-12.col-md-12 
+                        +product-secondary
+                    .col-xl-6.col-lg-12.col-md-12 
+                        +product-secondary
+                    .col-xl-6.col-lg-12.col-md-12 
+                        +product-secondary
+                    .col-xl-6.col-lg-12.col-md-12 
+                        +product-secondary
+                    .col-xl-6.col-lg-12.col-md-12 
+                        +product-secondary
+                    .col-xl-6.col-lg-12.col-md-12 
+                        +product-secondary
+                    .col-xl-6.col-lg-12.col-md-12 
+                        +product-secondary
+                    .col-xl-6.col-lg-12.col-md-12 
+                        +product-secondary
+    section.py-5
+        .container
+            .section-header.d-flex.flex-column.align-items-center
+                .category-tag.d-flex.align-items-center.gap-2
+                    ion-icon(name="thumbs-up").fz-text-b1.fw-600.p-2.rounded-circle.bg-secondary.text-white
+                    span.fz-text-b1.fw-600.text-secondary Why Us
+                .category-title.py-3.d-flex.align-items-center.justify-content-between 
+                    h3.text-color.fw-600.fz-h2 Why People Choose Us
+            .section-body 
+                .row.g-5 
+                   +whyUs("./images/Us-1.webp"," Fast & Secure Delivery")
+                   +whyUs("./images/Us-2.webp"," Money Back Guarantee")
+                   +whyUs("./images/Us-3.webp"," 24 Hour Return Policy")
+                   +whyUs("./images/Us-4.webp"," Pro Quality Support")
+    section.py-5 
+        .container 
+             .row.g-5
+                .col-xl-6.col-lg-12.col-md-12
+                    .section-option-main.product-item.overflow-hidden.rounded-3 
+                        a(href="#").section-option-img
+                            .img-product
+                                img(src="./images/poster-01.webp", alt="alt").img-cover
+                            .option-content
+                                h3.text-white.fz-h2 Rich sound, for less...
+                                .content-link.text-gray.fz-text-b1.d-flex.align-items-center.gap-2
+                                    span Collection 
+                                    ion-icon(name="arrow-forward")
+                .col-xl-6.col-lg-12.col-md-12
+                    .section-option-main.product-item.overflow-hidden.rounded-3 
+                        a(href="#").section-option-img
+                            .img-product
+                                img(src="./images/poster-02.webp", alt="alt").img-cover
+                            .option-content-2
+                                .content-link.text-gray.fz-text-b1.d-flex.align-items-center.gap-2
+                                    span 50% Offer In Winter
+                                h3.text-white.fz-h2 Rich sound, for less...
+    
+    

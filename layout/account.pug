@@ -1,0 +1,66 @@
+extends ./assets/pug/layout
+block main
+    +section-direction("Home","Blog","Tech Blog")
+    section.container.profile.py-5
+        .img-profile
+            img(src="./images/profile.jpg", alt="alt").img-cover.rounded-circle
+        .name 
+            h3.fz-h5.text-color.fw-500.pt-3 Hoang Thong
+        .join 
+            span.text-color.fz-text-b2 eTrade Member Since 
+            span.text-color.fz-text-b2 2023
+    section.container.py-5 
+        .row 
+            .col-xl-3.col-md-4
+                aside.dashboard.px-5.border.rounded-3 
+                    nav.px-3.py-5.d-flex.flex-column.gap-5 
+                        a(href="#").unlink.nav-item-active.d-flex.gap-3.align-items-center.px-3
+                            ion-icon(name="grid").fz-h5.text-gray
+                            span.fz-text-b1.fw-500.text-gray Dashboard 
+                        a(href="#").unlink.nav-item-active.d-flex.gap-3.align-items-center.px-3
+                            ion-icon(name="Cart").fz-h4.text-gray
+                            span.fz-text-b1.fw-500.text-gray Order 
+                        a(href="#").unlink.nav-item-active.d-flex.gap-3.align-items-center.px-3
+                            ion-icon(name="home").fz-h4.text-gray
+                            span.fz-text-b1.fw-500.text-gray Addresses
+                        a(href="#").unlink.nav-item-active.d-flex.gap-3.align-items-center.px-3.nav-active
+                            ion-icon(name="person").fz-h4.text-gray
+                            span.fz-text-b1.fw-500.text-gray Account 
+                        a(href="#").unlink.nav-item-active.d-flex.gap-3.align-items-center.px-3
+                            ion-icon(name="log-in").fz-h4.text-gray
+                            span.fz-text-b1.fw-500.text-gray Logout
+            .col-xl-7.col-md-6
+                .account-content.py-5.ps-5
+                    form(action="").row.form-toggle
+                        .col-lg-12.pb-4 
+                            .row.g-4
+                                .col-lg-6
+                                    label.form-input.w-100
+                                        input.input-focus(type="text", name="" placeholder="Fristname").border.border-gray.rounded-3.w-100.ps-3.fz-text-b1.py-2.text-color.fw-500 
+                                        span.fz-text-b2.bg-white.px-2 Fristname
+                                .col-lg-6
+                                    label.form-input.w-100
+                                        input.input-focus(type="text", name="" placeholder="Lastname").border.border-gray.rounded-3.w-100.ps-3.fz-text-b1.py-2.text-color.fw-500 
+                                        span.fz-text-b2.bg-white.px-2 Lastname
+                        .col-lg-12.pb-4
+                            label.form-input.w-100
+                                select.input-focus.border.border-gray.rounded-3.w-100.ps-3.fz-text-b1.py-2.text-color.fw-500
+                                    option(selected) Open this select menu
+                                    option(value="VietNam") VietNam
+                                    option(value="United Kindom") United Kindom
+                                span.fz-text-b2.bg-white.px-2 Country
+                        span.text-gray.fz-text-b3 This will be how your name will be displayed in the account section and in reviews
+                        h3.text-color.fz-h5.fw-500.py-5 Password Change
+                        .col-lg-12.pb-4
+                            label.form-input.w-100
+                                input.input-focus(type="number", name="" placeholder="").border.border-gray.rounded-3.w-100.ps-3.fz-text-b1.py-2.text-color.fw-500
+                                span.fz-text-b2.bg-white.px-2 Password  
+                        .col-lg-12.pb-4
+                            label.form-input.w-100
+                                input.input-focus(type="number", name="" placeholder="").border.border-gray.rounded-3.w-100.ps-3.fz-text-b1.py-2.text-color.fw-500
+                                span.fz-text-b2.bg-white.px-2 New Password 
+                        .col-lg-12.pb-4
+                            label.form-input.w-100
+                                input.input-focus(type="number", name="" placeholder="").border.border-gray.rounded-3.w-100.ps-3.fz-text-b1.py-2.text-color.fw-500
+                                span.fz-text-b2.bg-white.px-2 Cofirm New Password 
+                        button.button-primary.mt-2.bg-primary.fz-h5.fw-600.text-white.py-2.rounded-3.w-25 Update

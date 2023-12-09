@@ -1,0 +1,61 @@
+extends ./assets/pug/layout
+block main
+    +section-direction("Home","Blog","Tech Blog")
+    section.container.profile.py-5
+        .img-profile
+            img(src="./images/profile.jpg", alt="alt").img-cover.rounded-circle
+        .name 
+            h3.fz-h5.text-color.fw-500.pt-3 Hoang Thong
+        .join 
+            span.text-color.fz-text-b2 eTrade Member Since 
+            span.text-color.fz-text-b2 2023
+    section.container.py-5 
+        .row 
+            .col-xl-3.col-md-4
+                aside.dashboard.px-5.border.rounded-3 
+                    nav.px-3.py-5.d-flex.flex-column.gap-5 
+                        a(href="#").unlink.nav-item-active.d-flex.gap-3.align-items-center.px-3
+                            ion-icon(name="grid").fz-h5.text-gray
+                            span.fz-text-b1.fw-500.text-gray Dashboard 
+                        a(href="#").unlink.nav-item-active.d-flex.gap-3.align-items-center.px-3.nav-active
+                            ion-icon(name="Cart").fz-h4.text-gray
+                            span.fz-text-b1.fw-500.text-gray Order 
+                        a(href="#").unlink.nav-item-active.d-flex.gap-3.align-items-center.px-3
+                            ion-icon(name="home").fz-h4.text-gray
+                            span.fz-text-b1.fw-500.text-gray Addresses
+                        a(href="#").unlink.nav-item-active.d-flex.gap-3.align-items-center.px-3
+                            ion-icon(name="person").fz-h4.text-gray
+                            span.fz-text-b1.fw-500.text-gray Account 
+                        a(href="#").unlink.nav-item-active.d-flex.gap-3.align-items-center.px-3
+                            ion-icon(name="log-in").fz-h4.text-gray
+                            span.fz-text-b1.fw-500.text-gray Logout
+            .col-xl-7.col-md-6
+                .account-content.py-5.ps-5
+                    .row
+                        .col-xl-1
+                            span.fz-h5.fw-400.flex-center Order
+                        .col-xl-3
+                            span.fz-h5.fw-400.flex-center Date
+                        .col-xl-2
+                            span.fz-h5.fw-400.flex-center Status
+                        .col-xl-4
+                            span.fz-h5.fw-400.flex-center Total
+                        .col-xl-2
+                            span.fz-h5.fw-400.flex-center Actions
+                    .row.py-4
+                        .col-xl-1.flex-center
+                            span.fz-text-b2.fw-400.text-secondary #6523
+                        .col-xl-3.flex-center
+                            span.fz-text-b2.fw-400 October 16, 2023
+                        .col-xl-2.flex-center
+                            span.fz-text-b2.fw-400 Processing
+                        .col-xl-4.flex-center
+                            .fz-text-b2.fw-400.gap-2 	
+                                span $
+                                span 326.63 
+                                span for 
+                                span 1 
+                                span items
+                        .col-xl-2
+                            .fz-text-b2.fw-400.flex-center
+                                button.button-primary.fw-700.bg-primary.text-white.px-4.py-2.rounded-3 View

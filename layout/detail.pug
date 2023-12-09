@@ -1,0 +1,48 @@
+extends ./assets/pug/layout
+block main
+    +section-direction("Shop","Detail","Explore Detail Product")
+    section.py-5 
+        .container 
+            .row 
+                .col-md-12.col-lg-6.col-xl-6
+                    .img-content.px-5.pb-5
+                        .section-img 
+                            img(src="/layout/images/product-1.webp", alt="alt").img-cover.rounded-10
+                            .tag-sale 
+                                span.text-white.fw-700.bg-primary.py-1.px-4.fz-text-b3.rounded-2 Sale
+                        .section-img-list.mt-5 
+                            .row
+                                .img-option.col-3.overflow-hidden.cursor
+                                    img(src="./images/product-1.webp", alt="alt").img-cover.rounded-10
+                                .img-option.col-3.overflow-hidden.cursor
+                                    img(src="./images/product-1.webp", alt="alt").img-cover.rounded-10
+                                .img-option.col-3.overflow-hidden.cursor
+                                    img(src="./images/product-1.webp", alt="alt").img-cover.rounded-10
+                                .img-option.col-3.overflow-hidden.cursor
+                                    img(src="./images/product-1.webp", alt="alt").img-cover.rounded-10
+                .col-md-12.col-lg-6.col-xl-6
+                    .detail-content.pb-3.px-3.pt-8.d-flex.flex-column.gap-4
+                        .name-product
+                            h3.fz-h2.fw-700 3D™ wireless headset
+                        .price-product.d-flex.gap-2.fz-h4.fw-600 
+                            .price-old.text-decoration-line-through.text-dark
+                                span $
+                                span 500
+                            .price-sale.text-color
+                                span $
+                                span 480    
+                        .des.pe-5 
+                            p.fz-text-b1.text-gray.lh-base In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.
+                        .row.d-flex.align-items-center.justify-content-between 
+                            .col-3.flex-center
+                                input(type="number", name="" value="1").quantity.p-2.fz-text-b1.fw-600.w-50.border-0
+                                
+                            .col-6 
+                                a(href="")
+                                    button.button-primary.w-100.bg-primary.text-white.fz-h5.fw-700.rounded-3 Add to cart   
+                            .col-3
+                                .iconheart.flex-center.cursor 
+                                    ion-icon(name="heart-outline").p-3.border.fz-h5.fw-600.rounded-3  
+                
+                        
+

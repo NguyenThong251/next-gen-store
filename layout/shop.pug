@@ -1,0 +1,75 @@
+extends ./assets/pug/layout
+block main
+    +section-direction("Home","Shop","Explore All Product")
+    section.py-5.container
+        .row 
+            .col-xl-3
+                .filter-product.p-2 
+                    .filter-category
+                        h3.py-2.border-bottom.border-3.border-primary.fz-h5.text-color.fw-400 CATEGORIES
+                        li.list-none.d-flex.align-items-center.gap-3.my-4 
+                            input(type="checkbox", name="" autocomplete="off").form-check-input.style-checkbox
+                            span.text-color.fz-text-b1 headphone 
+                        li.list-none.d-flex.align-items-center.gap-3.my-4 
+                            input(type="checkbox", name="" autocomplete="off").form-check-input.style-checkbox
+                            span.text-color.fz-text-b1 phone 
+                        li.list-none.d-flex.align-items-center.gap-3.my-4 
+                            input(type="checkbox", name="" autocomplete="off").form-check-input.style-checkbox
+                            span.text-color.fz-text-b1 laptop 
+                        li.list-none.d-flex.align-items-center.gap-3.my-4 
+                            input(type="checkbox", name="" autocomplete="off").form-check-input.style-checkbox
+                            span.text-color.fz-text-b1 headphone 
+                    .filter-price
+                        h3.py-2.border-bottom.border-3.border-primary.fz-h5.text-color.fw-400 PRICE
+                        button.button-price.m-2 50 
+                        button.button-price.m-2 100 
+                        button.button-price.m-2 150
+                        button.button-price.m-2 200 
+                        button.button-price.m-2 250 
+                        button.button-price.m-2 300 
+                    button.button-primary.bg-primary.py-3.px-4.text-white.fz-h5.fw-500.rounded-3.mt-5 Reset All
+            .col-xl-9
+                .row
+                    .col-md-6.col-lg-4.col-xl-4.pb-4
+                        +product-list
+                    .col-md-6.col-lg-4.col-xl-4.pb-4
+                        +product-list
+                    .col-md-6.col-lg-4.col-xl-4.pb-4
+                        +product-list
+                    .col-md-6.col-lg-4.col-xl-4.pb-4
+                        +product-list
+                    .col-md-6.col-lg-4.col-xl-4.pb-4
+                        +product-list
+                    .col-md-6.col-lg-4.col-xl-4.pb-4
+                        +product-list
+                    .col-md-6.col-lg-4.col-xl-4.pb-4
+                        +product-list
+                    .col-md-6.col-lg-4.col-xl-4.pb-4
+                        +product-list
+                    .col-md-6.col-lg-4.col-xl-4.pb-4
+                        +product-list
+                a(href="").flex-center.unlink.pt-6
+                    .button.button-secondary.rounded-2.fw-600.py-3.px-5.fz-h5 Load more
+    section.container.py-5 
+        .section-header 
+            .category-tag.d-flex.align-items-center.gap-2
+                ion-icon(name="cart").fz-text-b1.fw-600.p-2.rounded-circle.bg-secondary.text-white
+                span.fz-text-b1.fw-600.text-secondary Our Products
+            .category-title.py-3.d-flex.align-items-center.justify-content-between 
+                h3.text-color.fw-600.fz-h2 Explore our Products
+                .category-icon.d-flex.gap-2 
+                    ion-icon(name="arrow-back").text-color.fw-600.p-2.rounded-2.border.border-light.fz-text-b1
+                    ion-icon(name="arrow-forward").text-color.fw-600.p-2.rounded-2.border.border-light.fz-text-b1
+        .section-body
+            .row.g-5
+                .col-md-6.col-lg-4.col-xl-3
+                    +product-list
+                .col-md-6.col-lg-4.col-xl-3
+                    +product-list
+                .col-md-6.col-lg-4.col-xl-3
+                    +product-list
+                .col-md-6.col-lg-4.col-xl-3
+                    +product-list
+
+
+
