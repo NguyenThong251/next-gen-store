@@ -155,13 +155,16 @@
                 <ion-icon
                   class="text-color fz-h4"
                   name="cart-outline"
-                ></ion-icon></a
-              ><a class="unlink fz-text-b1" href="">
-                <ion-icon
-                  class="text-color fz-h4"
-                  name="person-outline"
                 ></ion-icon
               ></a>
+              <form class="unlink fz-text-b1" href="">
+                <button type="button" id="signoutbutton">
+                  <ion-icon
+                    class="text-color fz-h4"
+                    name="person-outline"
+                  ></ion-icon>
+                </button>
+              </form>
               <div class="hamburger">
                 <ion-icon
                   class="text-color fz-h4"
@@ -172,6 +175,8 @@
           </div>
         </div>
       </div>
+      <h2 id="msg"></h2>
+      <h2 id="greet"></h2>
     </header>
     <section>
       <div
@@ -1642,8 +1647,32 @@
         </div>
       </div>
     </section>
+    <script>
+      let userCreds = JSON.parse(sessionStorage.getItem("user-creds"));
+      let userInfo = JSON.parse(sessionStorage.getItem("user-info"));
+
+      let MsgHead = document.getElementById("msg");
+      let GreetHead = document.getElementById("greet");
+      let SignoutBtn = document.getElementById("signoutbutton");
+
+      let Signout = () => {
+        sessionStorage.removeItem("user-creds");
+        sessionStorage.removeItem("user-info");
+        window.location.href = "signin.html";
+      };
+      let CheckCred = () => {
+        if (!sessionStorage.getItem("user-creds"))
+          window.location.href = "signin.html";
+        else {
+          MsgHead.innerText = `user with email "${userCreds.email}" Logged in`;
+          GreetHead.innerText = `Welcome ${userInfo.fullname}`;
+        }
+      };
+      window.addEventListener("load", CheckCred);
+      SignoutBtn.addEventListener("click", Signout);
+    </script>
     <script src="/layout/assets/js/app.js"></script>
-    <script src="/layout/assets/js/firebase.js" type="module"></script>
+
     <script src="/layout/assets/js/validator.js"></script>
     <script src="/layout/assets/js/cart.js"></script>
     <script

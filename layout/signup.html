@@ -182,7 +182,7 @@
                 class="d-flex flex-column gap-3 border p-5 bg-form-log border-2 border-white rounded-10"
                 action=""
                 method="method"
-                id="form-singup"
+                id="MainForm"
               >
                 <div class="logo"><img src="./images/logo.png" alt="" /></div>
                 <h3>Login</h3>
@@ -190,7 +190,7 @@
                   ><span class="name-log fz-text-b1">Name</span>
                   <input
                     class="py-2 ipnut-log w-100 px-3 fz-text-b1 border w-100 border-dark form-log rounded-3 mt-2"
-                    id="fullname"
+                    id="fullname-signup"
                     type="name"
                     name=""
                   />
@@ -199,9 +199,9 @@
                 <label for=""
                   ><span class="name-log fz-text-b1">Email</span>
                   <input
-                    id="email"
+                    id="email-signup"
                     class="py-2 ipnut-log w-100 px-3 fz-text-b1 border w-100 border-dark form-log rounded-3 mt-2"
-                    type="email"
+                    type=""
                     name=""
                   />
                   <span class="form-mess"></span>
@@ -209,14 +209,14 @@
                 <label for=""
                   ><span class="name-log fz-text-b1">Password </span>
                   <input
-                    id="password"
+                    id="Password-signup"
                     class="py-2 ipnut-log w-100 px-3 fz-text-b1 border w-100 border-dark form-log rounded-3 mt-2"
                     type="Password"
                     name=""
                   />
                   <span class="form-mess"></span>
                 </label>
-                <label for=""
+                <!-- <label for=""
                   ><span class="name-log fz-text-b1">Confirm Password </span>
                   <input
                     id="confirm-password"
@@ -225,11 +225,13 @@
                     name=""
                   />
                   <span class="form-mess"></span>
-                </label>
+                </label> -->
                 <div class="account fz-text-b2 d-flex gap-2 mt-2">
-                  <span>Already have an account?</span><a href="#">Signin </a>
+                  <span>Already have an account?</span
+                  ><a href="signin.html">Signin </a>
                 </div>
                 <button
+                  type="submit"
                   class="w-100 text-white fz-h5 fw-600 bg-primary border border-3 border-primary py-2 rounded-3 button-primary mt-2"
                 >
                   Signup</button
