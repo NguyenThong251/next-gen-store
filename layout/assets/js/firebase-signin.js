@@ -5,9 +5,16 @@ import {
   ref,
   child,
 } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-database.js";
+// import {
+//   getAuth,
+//   signInWithEmailAndPassword,
+// } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
 import {
   getAuth,
   signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithRedirect,
+  getRedirectResult,
 } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -29,7 +36,8 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase();
 const auth = getAuth(app);
 const dbref = ref(db);
-
+//signin gg
+const provider = new GoogleAuthProvider(app);
 //document
 
 let Email = document.getElementById("Email");
@@ -73,3 +81,29 @@ let signInUser = (evt) => {
     });
 };
 MainForm.addEventListener("submit", signInUser);
+//google signin
+const googleSignInBtn = document.getElementById("login-google");
+//function
+const signInWithGoogle = () => {
+  signInWithRedirect(auth, provider);
+};
+googleSignInBtn.addEventListener("click", signInWithGoogle);
+
+getRedirectResult(auth)
+  .then((result) => {
+    // This gives you a Google Access Token. You can use it to access Google APIs.
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    const token = credential.accessTokenn;
+
+    // The signed-in user info.
+    const user = result.user;
+    alert(user.displayName);
+
+    console.log("Google Sign-In successful:", user);
+  })
+  .catch((error) => {
+    // Handle Errors here.
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    console.error("Google Sign-In error:", errorCode, errorMessage);
+  });

@@ -537,5 +537,7 @@ input {
   right: 10px;
   cursor: pointer;
 }
-
+.color-or {
+  background-color: rgb(204, 62, 47);
+}
 /*# sourceMappingURL=app.css.map */
